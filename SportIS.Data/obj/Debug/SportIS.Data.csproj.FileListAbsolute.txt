@@ -1,0 +1,5 @@
+C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportIS.Data\bin\Debug\SportIS.Data.dll
+C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportIS.Data\bin\Debug\SportIS.Data.pdb
+C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportIS.Data\obj\Debug\SportIS.Data.csprojResolveAssemblyReference.cache
+C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportIS.Data\obj\Debug\SportIS.Data.dll
+C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportIS.Data\obj\Debug\SportIS.Data.pdb
