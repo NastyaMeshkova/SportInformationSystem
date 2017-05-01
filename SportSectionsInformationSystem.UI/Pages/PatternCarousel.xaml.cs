@@ -21,10 +21,12 @@ namespace SportSectionsInformationSystem.UI.Pages
     public partial class PatternCarousel : Page
     {
         MainWindow m;
+        string section = "";
         public PatternCarousel( MainWindow _m,string url)
         {
-            string section = url.Split('/')[url.Split('/').Length-1];
-            section = section.Remove(section.Length-4,4);
+            string _section = url.Split('/')[url.Split('/').Length-1];
+            _section = section.Remove(section.Length-4,4);
+            section = _section;
             m = _m;
             InitializeComponent();
         }
