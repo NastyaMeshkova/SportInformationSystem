@@ -3,3 +3,5 @@ C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportIS.Data\bin\Debu
 C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportIS.Data\obj\Debug\SportIS.Data.csprojResolveAssemblyReference.cache
 C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportIS.Data\obj\Debug\SportIS.Data.dll
 C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportIS.Data\obj\Debug\SportIS.Data.pdb
+C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportIS.Data\bin\Debug\Newtonsoft.Json.dll
+C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportIS.Data\bin\Debug\Newtonsoft.Json.xml

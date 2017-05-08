@@ -6,18 +6,30 @@
       xmlns:local="clr-namespace:SportSectionsInformationSystem.UI.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="1080" d:DesignWidth="1920"
-      Title="MainPage" Background="White">
+      Title="MainPage" Background="White" Loaded="Page_Loaded">
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"/>
+            <ColumnDefinition MaxWidth="100"/>
             <ColumnDefinition/>
-            <ColumnDefinition Width="200"/>
+            <ColumnDefinition MaxWidth="100"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
+            <RowDefinition MaxHeight="60"/>
             <RowDefinition/>
             <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical" Grid.Column="5" Grid.RowSpan="5" >
+            <Button Grid.Column="4" Click="button_add_new_section_click" Height="40" Margin="10"/>
+        <Button Grid.Column="4" Grid.Row="1"  Margin="10" Background="#FF881D1D" Height="40"/>
+        </StackPanel>
+        <Button />
+
+        <ScrollViewer Grid.Row="1" Grid.Column="1" Margin="300,10">
+            <Grid>
+                <StackPanel Orientation="Vertical" Name="stack"></StackPanel>
+            </Grid>
+        </ScrollViewer>
+
     </Grid>
 </Page>

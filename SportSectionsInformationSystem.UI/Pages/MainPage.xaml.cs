@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using SportIS.Data.Logic;
+using SportIS.Data;
 
 namespace SportSectionsInformationSystem.UI.Pages
 {
@@ -20,9 +22,23 @@ namespace SportSectionsInformationSystem.UI.Pages
     /// </summary>
     public partial class MainPage : Page
     {
-        public MainPage()
+        Repository r;
+        MainWindow m;
+        public MainPage(MainWindow _m)
         {
+            r = new Repository();
+             m = _m;
             InitializeComponent();
+        }
+
+        private void button_add_new_section_click(object sender, RoutedEventArgs e)
+        {
+            m.mainFrame.Content = new PageAddSection(r);
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

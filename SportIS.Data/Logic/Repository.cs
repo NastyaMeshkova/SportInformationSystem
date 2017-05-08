@@ -3,18 +3,42 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace SportIS.Data.Logic
 {
-    class Repository
+    public class Repository
     {
-        private List<SubwayStation> SubwayStations;
-        private List<SportClub> SportClubs;
-        private List<SportActivity> SportActivities;
+
+        private List<SubwayStation> subwayStations;
+        public List<SubwayStation> SubwayStations
+        {
+            get { return subwayStations; }         
+        }
+        private List<SportClub> sportClubs;
+        public List<SportClub> SportClubs
+        {
+            get { return sportClubs; }
+        }
+        private List<SportActivity> sportActivities;
+        public List<SportActivity> SportActivities
+        {
+            get { return sportActivities; }
+
+        }
+        private static readonly Lazy<Repository> instanceHolder =
+        new Lazy<Repository>(() => new Repository());
+
+        public static Repository Instance
+        {
+            get { return instanceHolder.Value; }
+        }
         public Repository()
         {
-            //метро
-            //да вообще все
+            subwayStations =  JsonConvert.DeserializeObject<List<SubwayStation>>(File.ReadAllText("../../../SportIS.Data/Files/SubwayStations.json"));
+            sportClubs = JsonConvert.DeserializeObject<List<SportClub>>(File.ReadAllText("../../../SportIS.Data/Files/SportClubs.json"));
+            sportActivities = new List<SportActivity>();
         }
         public void AddSubway(SubwayStation subway)
         {
@@ -28,13 +52,18 @@ namespace SportIS.Data.Logic
         {
 
         }
-        public void Serialize( SportActivity sport)
+        public void AddSportActivity(SportActivity s)
         {
-
+            sportActivities.Add(s);
+        }
+        public void Serialize( List<SportClub> sport)
+        {
+            string str = JsonConvert.SerializeObject(sport);
+            File.WriteAllText("../../../SportIS.Data/Files/SportClubs.json",str);
         }
         public SportActivity Deserialize(string file)
         {
-            SportActivity s = new SportActivity();
+           
             return null;
         }
 

@@ -22,17 +22,17 @@ namespace SportSectionsInformationSystem.UI.Pages
     {
         MainWindow m;
         string section = "";
-        public PatternCarousel( MainWindow _m,string url)
+        public PatternCarousel( MainWindow _m, string url)
         {
             string _section = url.Split('/')[url.Split('/').Length-1];
-            _section = section.Remove(section.Length-4,4);
+            _section = _section.Remove(_section.Length-4,4);
             section = _section;
             m = _m;
             InitializeComponent();
         }
         private void button_pattern_Click(object sender, RoutedEventArgs e)
         {
-            
+            m.mainFrame.Content = new MainPage(m);
         }
     }
 }

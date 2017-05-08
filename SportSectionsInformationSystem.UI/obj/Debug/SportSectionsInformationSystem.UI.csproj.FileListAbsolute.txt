@@ -24,3 +24,7 @@ C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportSectionsInformat
 C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\SportSectionsInformationSystem.UI.pdb
 C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\Pages\MainPage.g.cs
 C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\Pages\MainPage.baml
+C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportSectionsInformationSystem.UI\bin\Debug\Newtonsoft.Json.dll
+C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportSectionsInformationSystem.UI\bin\Debug\Newtonsoft.Json.xml
+C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\Pages\PageAddSection.g.cs
+C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\Pages\PageAddSection.baml

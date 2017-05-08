@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SportIS.Data
 {
-    class SportClub
+    public class SportClub
     {
         private int id;
         private string name;
@@ -16,12 +16,12 @@ namespace SportIS.Data
             get { return name; }
 
         }
-        private List<SubwayStation> station;
+        private List<string> stations;
 
-        public List<SubwayStation> Station
+        public List<string> Stations
         {
-            get { return station; }
-            set { station = value; }
+            get { return stations; }
+            set { stations = value; }
 
         }
         private string  address;
@@ -31,7 +31,29 @@ namespace SportIS.Data
             get { return address; }
            
         }
+        private string phone;
 
+        public string Phone
+        {
+            get { return phone; }
+            set { phone = value; }
+        }
+
+        public SportClub(string name, List<string> stations, string address, string phone)
+        {
+            this.stations = stations;
+            this.name = name;
+            this.address = address;
+            this.phone = phone;
+        }
+        public override bool Equals(object obj)
+        {
+            return name.Equals(obj.ToString());
+        }
+        public override string ToString()
+        {
+            return name;
+        }
 
 
 
