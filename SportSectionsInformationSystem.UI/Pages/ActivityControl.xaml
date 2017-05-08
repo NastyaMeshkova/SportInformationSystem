@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:SportSectionsInformationSystem.UI.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="150" d:DesignWidth="300" Background="#FFFBF7F7"
+      d:DesignHeight="200" d:DesignWidth="350" Background="#FFFBF7F7" Margin="5" Loaded="UserControl_Loaded"
       >
 
     <Grid>
@@ -15,6 +15,14 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
+        <TextBlock Name="text_actTitle" FontSize="20"/>
+        <TextBlock TextWrapping="Wrap" Name="text_actdesc" Grid.Row="1"/>
+        <TextBlock Name="text_clubname" Grid.Row="2"/>
+        <TextBlock Name="text_address" Grid.Row="3"/>
+        <TextBlock Name="text_metro" Grid.Row="4"/>
+        <TextBlock Name="text_price" Grid.Row="5"/>
+
     </Grid>
 </UserControl>

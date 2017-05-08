@@ -26,7 +26,7 @@ namespace SportSectionsInformationSystem.UI.Pages
         MainWindow m;
         public MainPage(MainWindow _m)
         {
-            r = new Repository();
+            r = Repository.Instance;
              m = _m;
             InitializeComponent();
         }
@@ -38,7 +38,18 @@ namespace SportSectionsInformationSystem.UI.Pages
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            
+            List<SportActivity> activities = r.SportActivities.Where(e1=>e1.Type.Equals(CurrentActivity.Activity)).ToList();
+            for (int i = 0; i < activities.Count; i++)
+            {
+                ActivityControl a = new ActivityControl(activities[i]);
+                stack.Children.Add(a);
+            }
+        }
+
+        private void deleteSectionClick(object sender, RoutedEventArgs e)
+        {
+            r.Serialize(r.SportActivities);
+            MessageBox.Show("jr");
         }
     }
 }

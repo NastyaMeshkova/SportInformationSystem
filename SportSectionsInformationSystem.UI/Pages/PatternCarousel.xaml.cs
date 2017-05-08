@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SportIS.Data.Logic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,6 +34,7 @@ namespace SportSectionsInformationSystem.UI.Pages
         private void button_pattern_Click(object sender, RoutedEventArgs e)
         {
             m.mainFrame.Content = new MainPage(m);
+            CurrentActivity.Activity = section;
         }
     }
 }

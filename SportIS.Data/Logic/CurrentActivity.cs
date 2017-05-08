@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SportIS.Data.Logic
 {
-    static class CurrentActivity
+    public static class CurrentActivity
     {
         public static string Activity = "";
     }

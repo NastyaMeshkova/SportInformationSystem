@@ -8,12 +8,12 @@ namespace SportIS.Data
 {
     public class SportClub
     {
-        private int id;
         private string name;
 
         public string ClubName
         {
             get { return name; }
+            set { name = value; }
 
         }
         private List<string> stations;
@@ -29,6 +29,7 @@ namespace SportIS.Data
         public string Address
         {
             get { return address; }
+            set { address = value; }
            
         }
         private string phone;
@@ -46,17 +47,6 @@ namespace SportIS.Data
             this.address = address;
             this.phone = phone;
         }
-        public override bool Equals(object obj)
-        {
-            return name.Equals(obj.ToString());
-        }
-        public override string ToString()
-        {
-            return name;
-        }
-
-
-
-
+        
     }
 }

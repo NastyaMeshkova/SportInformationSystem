@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SportIS.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,11 +19,29 @@ namespace SportSectionsInformationSystem.UI.Pages
     /// <summary>
     /// Логика взаимодействия для ActivityControl.xaml
     /// </summary>
-    public partial class ActivityControl : Page
+    public partial class ActivityControl :  UserControl
     {
-        public ActivityControl()
+        SportActivity s;
+        public ActivityControl(SportActivity s)
         {
+            this.s = s;
             InitializeComponent();
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            text_actTitle.Text = s.Title;
+            text_actdesc.Text = s.Description;
+            text_address.Text = s.Club.Address;
+            text_clubname.Text = s.Club.ClubName;
+            text_metro.Text = "";
+            for (int i = 0; i < s.Club.Stations.Count; i++)
+            {
+                text_metro.Text += s.Club.Stations[i]+" ";
+            }
+            text_price.Text = s.Price.ToString();
+
+            
         }
     }
 }

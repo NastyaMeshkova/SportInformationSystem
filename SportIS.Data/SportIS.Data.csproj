@@ -52,6 +52,7 @@
     <Compile Include="Model\SubwayStation.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Files\SportActivities.json" />
     <None Include="Files\SportClubs.json" />
     <None Include="Files\SubwayStations.json" />
     <None Include="packages.config" />

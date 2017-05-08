@@ -26,8 +26,8 @@
         <Label Grid.Row="2" Content="Введите название спортивного клуба"/>
         <Label  Grid.Row="4" Content="Введите описание"/>
         <TextBox Name="textbox_name" Grid.Row="1" Margin="20"/>
-        <TextBox Name="textbox_desc" Grid.Row="5" Margin="20"/>
-        <ComboBox Name="combobox_sportclub" Grid.Row="3" Margin="20">
+        <TextBox TextWrapping="Wrap" Name="textbox_desc" Grid.Row="5" Margin="20"/>
+        <ComboBox Name="combobox_sportclub" Grid.Row="3" Margin="20,20,20,20">
             
         </ComboBox>
         <Label  Grid.Row="6" Content="Введите стоимость одного занятия"/>

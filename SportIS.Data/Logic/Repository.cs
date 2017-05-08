@@ -38,7 +38,8 @@ namespace SportIS.Data.Logic
         {
             subwayStations =  JsonConvert.DeserializeObject<List<SubwayStation>>(File.ReadAllText("../../../SportIS.Data/Files/SubwayStations.json"));
             sportClubs = JsonConvert.DeserializeObject<List<SportClub>>(File.ReadAllText("../../../SportIS.Data/Files/SportClubs.json"));
-            sportActivities = new List<SportActivity>();
+            sportActivities = JsonConvert.DeserializeObject<List<SportActivity>>(File.ReadAllText("../../../SportIS.Data/Files/SportActivities.json"));
+
         }
         public void AddSubway(SubwayStation subway)
         {
@@ -56,10 +57,10 @@ namespace SportIS.Data.Logic
         {
             sportActivities.Add(s);
         }
-        public void Serialize( List<SportClub> sport)
+        public void Serialize( List<SportActivity> sport)
         {
             string str = JsonConvert.SerializeObject(sport);
-            File.WriteAllText("../../../SportIS.Data/Files/SportClubs.json",str);
+            File.WriteAllText("../../../SportIS.Data/Files/SportActivities.json",str);
         }
         public SportActivity Deserialize(string file)
         {

@@ -74,8 +74,9 @@ namespace SportSectionsInformationSystem.UI.Pages
 
         private void add_section_click(object sender, RoutedEventArgs e)
         {
-            SportActivity s = new SportActivity(textbox_name.Text,r.SportClubs.First(e1=>e1.ClubName.Equals(combobox_sportclub.Text)),textbox_desc.Text,week_time);
+            SportActivity s = new SportActivity(textbox_name.Text,r.SportClubs.First(e1=>e1.ClubName.Equals(combobox_sportclub.Text)),textbox_desc.Text,week_time,double.Parse(textbox_price.Text),"Футбол");
             r.AddSportActivity(s);
+           
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -98,6 +99,7 @@ namespace SportSectionsInformationSystem.UI.Pages
             list_week_time.Items.Clear();
             for (int i = 0; i < week_time.Count; i++)
             {
+                
                 list_week_time.Items.Add(week_time.ElementAt(i).Key+" "+ week_time.ElementAt(i).Value);
             }
         }

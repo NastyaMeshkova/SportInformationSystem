@@ -13,6 +13,8 @@ namespace SportIS.Data
         public string Title
         {
             get { return title; }
+            set { title = value; }
+
         }
         private SportClub club;
 
@@ -26,12 +28,30 @@ namespace SportIS.Data
         {
             get { return description; }
         }
-        public SportActivity(string title, SportClub club, string description,Dictionary<string,string> wt)
+        private double price;
+
+        public double Price
         {
+            get { return price; }
+            
+        }
+        private string type;
+
+        public string Type
+        {
+            get { return type; }
+           
+        }
+
+
+        public SportActivity(string title, SportClub club, string description,Dictionary<string,string> wt, double price,string type)
+        {
+            this.type = type;
             this.title = title;
             this.club = club;
             this.description = description;
             weekday_time = wt;
+            this.price = price;
         }
         private Dictionary<string,string> weekday_time;
 
