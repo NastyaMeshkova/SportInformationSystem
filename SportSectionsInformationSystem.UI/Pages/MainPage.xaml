@@ -24,8 +24,8 @@
         <Button Grid.Column="4" Grid.Row="1"  Margin="10" Background="#FF881D1D" Height="40" Click="deleteSectionClick"/>
         </StackPanel>
         <Button />
-
-        <ScrollViewer Grid.Row="1" Grid.Column="1" Margin="200,10">
+        <Label Name="label_section" Grid.Column="1" Margin="3,3,3,-60" HorizontalContentAlignment="Center" FontSize="30"/>
+        <ScrollViewer Grid.Row="1" Grid.Column="1" Margin="200,70">
             <Grid>
                 <StackPanel Orientation="Vertical" Name="stack"></StackPanel>
             </Grid>

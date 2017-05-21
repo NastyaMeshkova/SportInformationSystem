@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using SportSectionsInformationSystem.UI.Pages;
+using System.Security.Principal;
 
 namespace SportSectionsInformationSystem.UI
 {
@@ -23,13 +24,30 @@ namespace SportSectionsInformationSystem.UI
     {
         public MainWindow()
         {
-
+            AppDomain.CurrentDomain.SetPrincipalPolicy(PrincipalPolicy.WindowsPrincipal);
             InitializeComponent();
+            Switcher.pageSwitcher = this;
+           
         }
-
+        public void Navigate(Page nextPage)
+        {
+            mainFrame.Content = nextPage;
+        }
         private void mainFrame_Loaded(object sender, RoutedEventArgs e)
         {
-            mainFrame.Content = new PageCarousel(this);
+            Navigate( new PageCarousel(this));
         }
+
+    }
+    public static class Switcher
+    {
+        public static MainWindow pageSwitcher;
+
+        public static void Switch(Page newPage)
+        {
+            pageSwitcher.Navigate(newPage);
+        }
+
+
     }
 }

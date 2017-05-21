@@ -30,3 +30,5 @@ C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportSectionsInformat
 C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\Pages\PageAddSection.baml
 C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\Pages\ActivityControl.g.cs
 C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\Pages\ActivityControl.baml
+C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\Pages\SearchControl.g.cs
+C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\Pages\SearchControl.baml

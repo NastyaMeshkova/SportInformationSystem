@@ -23,25 +23,27 @@ namespace SportSectionsInformationSystem.UI.Pages
     public partial class MainPage : Page
     {
         Repository r;
-        MainWindow m;
-        public MainPage(MainWindow _m)
+       
+        public MainPage()
         {
             r = Repository.Instance;
-             m = _m;
+           
             InitializeComponent();
         }
 
         private void button_add_new_section_click(object sender, RoutedEventArgs e)
         {
-            m.mainFrame.Content = new PageAddSection(r);
+            Switcher.Switch(new PageAddSection(null));
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            label_section.Content = CurrentActivity.Activity;
             List<SportActivity> activities = r.SportActivities.Where(e1=>e1.Type.Equals(CurrentActivity.Activity)).ToList();
             for (int i = 0; i < activities.Count; i++)
             {
                 ActivityControl a = new ActivityControl(activities[i]);
+                a.Height = 300;
                 stack.Children.Add(a);
             }
         }

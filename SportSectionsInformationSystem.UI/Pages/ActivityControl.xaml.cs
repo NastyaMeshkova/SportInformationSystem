@@ -1,4 +1,5 @@
 ﻿using SportIS.Data;
+using SportIS.Data.Logic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,9 +23,11 @@ namespace SportSectionsInformationSystem.UI.Pages
     public partial class ActivityControl :  UserControl
     {
         SportActivity s;
+        Repository r;
         public ActivityControl(SportActivity s)
         {
             this.s = s;
+            r = Repository.Instance;
             InitializeComponent();
         }
 
@@ -42,6 +45,17 @@ namespace SportSectionsInformationSystem.UI.Pages
             text_price.Text = s.Price.ToString();
 
             
+        }
+
+        private void button_edit_click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new PageAddSection(s));
+        }
+
+        private void buttonDeleteClick(object sender, RoutedEventArgs e)
+        {
+            r.SportActivities.Remove(s);
+            Switcher.Switch(new MainPage());
         }
     }
 }

@@ -23,15 +23,60 @@ namespace SportSectionsInformationSystem.UI.Pages
     public partial class PageAddSection : Page
     {
         Repository r;
+        SportActivity s;
         Dictionary<string, string> week_time;
-        public PageAddSection(Repository _r)
+        public PageAddSection(SportActivity _s)
         {
+            InitializeComponent();
             r = Repository.Instance;
             week_time = new Dictionary<string, string>();
-            InitializeComponent();
+            s = _s;
+            if (s!=null)
+            {
+                buttonAddEdit.Content = "Редактировать";
+                textbox_name.Text = s.Title;
+                textbox_desc.Text = s.Description;
+                textbox_price.Text = s.Price.ToString();
+                week_time = s.WeekDayTime;
+                foreach (var item in s.WeekDayTime)
+                {
+                    list_week_time.Items.Add(item.Key+" "+item.Value);
+                }
+                
+            }
+           
 
         }
+        private SportActivity Add()
+        {
+            SportActivity sport = null;
+            try
+            {
 
+                if (string.IsNullOrEmpty(textbox_name.Text) || string.IsNullOrEmpty(combobox_sportclub.Text) || string.IsNullOrEmpty(textbox_price.Text))
+                {
+                    MessageBox.Show("Пожалуйста, заполните все поля (описание по желанию)");
+                }
+                else
+                {
+                    if (double.Parse(textbox_price.Text) < 0)
+                    {
+                        throw new ArgumentException("Цена отрицательная");
+                    }
+                    SportActivity s = new SportActivity(textbox_name.Text, r.SportClubs.First(e1 => e1.ClubName.Equals(combobox_sportclub.Text)), textbox_desc.Text, week_time, double.Parse(textbox_price.Text), CurrentActivity.Activity);
+                    sport = s;
+                }
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Цена введена неверно");
+            }
+            catch (ArgumentException a)
+            {
+                MessageBox.Show(a.Message);
+            }
+            return sport;
+        }
         private void add_click(object sender, RoutedEventArgs e)
         {
             if (!string.IsNullOrEmpty(textbox_time.Text) && !string.IsNullOrEmpty(combobox_weekday.Text))
@@ -45,12 +90,13 @@ namespace SportSectionsInformationSystem.UI.Pages
                 {
                     week_time.Add(combobox_weekday.Text, textbox_time.Text);
                     RenewList();
-                }           
+                }
             }
             else
             {
                 MessageBox.Show("Вы не ввели время или день недели. Пожалуйста, заполните поля");
             }
+            
         }
 
         private void delete_click(object sender, RoutedEventArgs e)
@@ -59,11 +105,11 @@ namespace SportSectionsInformationSystem.UI.Pages
             {
                 if (list_week_time.SelectedIndex != -1) //если выбрана строка в листбоксе
                 {
-                    KeyValuePair<string,string> k = week_time.ElementAt(list_week_time.SelectedIndex);
+                    KeyValuePair<string, string> k = week_time.ElementAt(list_week_time.SelectedIndex);
                     week_time.Remove(k.Key);//удаление  указанного элемента из коллекции
                     RenewList();
                 }
-                
+
             }
             catch (Exception e1)
             {
@@ -74,9 +120,16 @@ namespace SportSectionsInformationSystem.UI.Pages
 
         private void add_section_click(object sender, RoutedEventArgs e)
         {
-            SportActivity s = new SportActivity(textbox_name.Text,r.SportClubs.First(e1=>e1.ClubName.Equals(combobox_sportclub.Text)),textbox_desc.Text,week_time,double.Parse(textbox_price.Text),"Футбол");
-            r.AddSportActivity(s);
-           
+            if (s==null)
+            {
+                r.AddSportActivity(Add());
+            }
+            else
+            {
+                int i = r.SportActivities.IndexOf(s);
+                r.SportActivities[i] = Add();
+            }
+            Switcher.Switch(new MainPage());
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -99,8 +152,8 @@ namespace SportSectionsInformationSystem.UI.Pages
             list_week_time.Items.Clear();
             for (int i = 0; i < week_time.Count; i++)
             {
-                
-                list_week_time.Items.Add(week_time.ElementAt(i).Key+" "+ week_time.ElementAt(i).Value);
+
+                list_week_time.Items.Add(week_time.ElementAt(i).Key + " " + week_time.ElementAt(i).Value);
             }
         }
     }

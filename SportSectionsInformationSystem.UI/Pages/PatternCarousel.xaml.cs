@@ -33,7 +33,7 @@ namespace SportSectionsInformationSystem.UI.Pages
         }
         private void button_pattern_Click(object sender, RoutedEventArgs e)
         {
-            m.mainFrame.Content = new MainPage(m);
+            Switcher.Switch(new MainPage());
             CurrentActivity.Activity = section;
         }
     }

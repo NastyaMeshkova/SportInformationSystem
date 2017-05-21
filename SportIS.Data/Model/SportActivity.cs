@@ -58,6 +58,7 @@ namespace SportIS.Data
         public Dictionary<string,string> WeekDayTime
         {
             get { return weekday_time; }
+            set { weekday_time = value; }
         }
 
     }
