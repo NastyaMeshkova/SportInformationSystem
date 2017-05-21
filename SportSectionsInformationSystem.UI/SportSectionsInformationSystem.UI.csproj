@@ -55,6 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Pages\PageFiltered.xaml.cs">
+      <DependentUpon>PageFiltered.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\WindowSearch.xaml.cs">
+      <DependentUpon>WindowSearch.xaml</DependentUpon>
+    </Compile>
     <Page Include="Pages\ActivityControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -64,6 +70,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\PageAddSection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageFiltered.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -100,6 +110,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\PatternCarousel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\WindowSearch.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -172,6 +186,25 @@
     <Resource Include="UI\delete.png" />
     <Resource Include="UI\deleteButton.png" />
     <Resource Include="UI\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\012.png" />
+    <Resource Include="UI\14378538.png" />
+    <Resource Include="UI\44_yapfiles.ru.png" />
+    <Resource Include="UI\93271842_Belaya_prozrachnaya_ya_delala.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\0.png" />
+    <Resource Include="UI\prozrachnyifon1_yapfiles.ru.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\setwalls.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\why-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\New-arrow-303271_960_720.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

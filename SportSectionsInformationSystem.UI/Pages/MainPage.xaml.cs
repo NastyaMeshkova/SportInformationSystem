@@ -29,6 +29,10 @@ namespace SportSectionsInformationSystem.UI.Pages
             r = Repository.Instance;
            
             InitializeComponent();
+            BitmapImage b = new BitmapImage(new Uri(CurrentActivity.BackGroundURL, UriKind.Relative));
+            ImageBrush content = new ImageBrush();
+            content.ImageSource = b;
+            Background = content;
         }
 
         private void button_add_new_section_click(object sender, RoutedEventArgs e)

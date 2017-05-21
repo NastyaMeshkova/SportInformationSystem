@@ -9,5 +9,6 @@ namespace SportIS.Data.Logic
     public static class CurrentActivity
     {
         public static string Activity = "";
+        public static string BackGroundURL = "";
     }
 }

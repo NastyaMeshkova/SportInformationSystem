@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SportIS.Data.Logic;
+using SportSectionsInformationSystem.UI.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,9 +25,11 @@ namespace SportSectionsInformationSystem.UI.Pages
     //боевые искусства, волейбол, баскетбол, футбол, плавание,  фитнес, спортивная гимнастика, фигурное катание, аэробика, большой теннис
     public partial class PageCarousel : Page
     {
+        Repository r;
         MainWindow m;
         public PageCarousel(MainWindow _m)
         {
+            r = Repository.Instance;
             m = _m;      
             InitializeComponent();
             DataContext = TabControl;
@@ -48,7 +52,7 @@ namespace SportSectionsInformationSystem.UI.Pages
            }
         private FrameworkElement CreateFixedSizeLabel(string uri_picture, Size size)
         {
-            PatternCarousel label = new PatternCarousel(m,uri_picture);
+            PatternCarousel label = new PatternCarousel(uri_picture);
             label.FontSize = 64;
             label.MinWidth = label.MaxWidth = label.Width = size.Width;
             label.MinHeight = label.MaxHeight = label.Height = size.Height;
@@ -56,6 +60,9 @@ namespace SportSectionsInformationSystem.UI.Pages
             ImageBrush content = new ImageBrush();
             content.ImageSource = b;
             label.Background = content;
+            string _section = uri_picture.Split('/')[uri_picture.Split('/').Length - 1];
+            _section = _section.Remove(_section.Length - 4, 4);
+            r.Sections.Add(_section);
             return label;
         }
 
@@ -67,6 +74,12 @@ namespace SportSectionsInformationSystem.UI.Pages
         private void button_previous_Click(object sender, RoutedEventArgs e)
         {
             TabControl.SpinToPrevious();
+        }
+
+        private void searchClick(object sender, RoutedEventArgs e)
+        {
+            WindowSearch w = new WindowSearch();
+            w.Show();
         }
     }
 }

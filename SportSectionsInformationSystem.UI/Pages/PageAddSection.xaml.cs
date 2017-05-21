@@ -37,6 +37,7 @@ namespace SportSectionsInformationSystem.UI.Pages
                 textbox_name.Text = s.Title;
                 textbox_desc.Text = s.Description;
                 textbox_price.Text = s.Price.ToString();
+                combobox_sportclub.Text = s.Club.ClubName;
                 week_time = s.WeekDayTime;
                 foreach (var item in s.WeekDayTime)
                 {

@@ -28,6 +28,7 @@ namespace SportSectionsInformationSystem.UI.Pages
         {
             this.s = s;
             r = Repository.Instance;
+           
             InitializeComponent();
         }
 
@@ -49,11 +50,15 @@ namespace SportSectionsInformationSystem.UI.Pages
 
         private void button_edit_click(object sender, RoutedEventArgs e)
         {
+            CurrentActivity.Activity = s.Type;
+            CurrentActivity.BackGroundURL = "../../Images/CarouselCovers/"+CurrentActivity.Activity+".jpg";
             Switcher.Switch(new PageAddSection(s));
         }
 
         private void buttonDeleteClick(object sender, RoutedEventArgs e)
         {
+            CurrentActivity.Activity = s.Type;
+            CurrentActivity.BackGroundURL = "../../Images/CarouselCovers/" + CurrentActivity.Activity + ".jpg";        
             r.SportActivities.Remove(s);
             Switcher.Switch(new MainPage());
         }

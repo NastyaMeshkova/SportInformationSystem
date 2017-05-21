@@ -14,7 +14,12 @@ namespace SportIS.Data.Logic
         private List<SubwayStation> subwayStations;
         public List<SubwayStation> SubwayStations
         {
-            get { return subwayStations; }         
+            get { return subwayStations; }
+        }
+        public List<string> sections;
+        public List<string> Sections
+        {
+            get { return sections; }
         }
         private List<SportClub> sportClubs;
         public List<SportClub> SportClubs
@@ -36,10 +41,10 @@ namespace SportIS.Data.Logic
         }
         public Repository()
         {
-            subwayStations =  JsonConvert.DeserializeObject<List<SubwayStation>>(File.ReadAllText("../../../SportIS.Data/Files/SubwayStations.json"));
+            subwayStations = JsonConvert.DeserializeObject<List<SubwayStation>>(File.ReadAllText("../../../SportIS.Data/Files/SubwayStations.json"));
             sportClubs = JsonConvert.DeserializeObject<List<SportClub>>(File.ReadAllText("../../../SportIS.Data/Files/SportClubs.json"));
             sportActivities = JsonConvert.DeserializeObject<List<SportActivity>>(File.ReadAllText("../../../SportIS.Data/Files/SportActivities.json"));
-
+            sections = new List<string>();
         }
         public void AddSubway(SubwayStation subway)
         {
@@ -57,16 +62,40 @@ namespace SportIS.Data.Logic
         {
             sportActivities.Add(s);
         }
-        public void Serialize( List<SportActivity> sport)
+        public void Serialize(List<SportActivity> sport)
         {
             string str = JsonConvert.SerializeObject(sport);
-            File.WriteAllText("../../../SportIS.Data/Files/SportActivities.json",str);
+            File.WriteAllText("../../../SportIS.Data/Files/SportActivities.json", str);
         }
         public SportActivity Deserialize(string file)
         {
-           
+
             return null;
         }
+        public List<SportActivity> Search( double priceMin, double priceMax, string type, string metroStation)
+        {
+            var filtered = SportActivities.Where(x =>
+                (
+
+                   ( priceMin == -1 && priceMax==100000? true : x.Price >=priceMin && x.Price<=priceMax)
+                    && (type == "" ? true : x.Type.Equals(type))
+                    && (metroStation == "" ? true : x.Club.Stations.Contains(metroStation))
+                )).ToList();
+            return filtered;
+        }
+        /*private bool ContainsDayOfWeek(List<string> weekDays, SportActivity s)
+        {
+            bool flag = false;
+            foreach (var item in weekDays)
+            {
+                if (s.WeekDayTime.Keys.Contains(item))
+                {
+                    flag = true;
+                    break;
+                }
+            }
+            return flag;
+        }*/
 
     }
 }

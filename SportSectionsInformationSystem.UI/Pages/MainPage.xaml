@@ -21,11 +21,11 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Vertical" Grid.Column="5" Grid.RowSpan="5" >
             <Button Grid.Column="4" Click="button_add_new_section_click" Height="40" Margin="10"/>
-        <Button Grid.Column="4" Grid.Row="1"  Margin="10" Background="#FF881D1D" Height="40" Click="deleteSectionClick"/>
+      
         </StackPanel>
         <Button />
         <Label Name="label_section" Grid.Column="1" Margin="3,3,3,-60" HorizontalContentAlignment="Center" FontSize="30"/>
-        <ScrollViewer Grid.Row="1" Grid.Column="1" Margin="200,70">
+        <ScrollViewer Grid.Row="1" Grid.Column="1" Margin="100,40">
             <Grid>
                 <StackPanel Orientation="Vertical" Name="stack"></StackPanel>
             </Grid>

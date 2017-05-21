@@ -21,20 +21,23 @@ namespace SportSectionsInformationSystem.UI.Pages
     /// </summary>
     public partial class PatternCarousel : Page
     {
-        MainWindow m;
         string section = "";
-        public PatternCarousel( MainWindow _m, string url)
+        string url = "";
+        public PatternCarousel(string url)
         {
+            this.url = url;
             string _section = url.Split('/')[url.Split('/').Length-1];
             _section = _section.Remove(_section.Length-4,4);
             section = _section;
-            m = _m;
             InitializeComponent();
         }
         private void button_pattern_Click(object sender, RoutedEventArgs e)
         {
-            Switcher.Switch(new MainPage());
             CurrentActivity.Activity = section;
+            CurrentActivity.BackGroundURL = url;
+            MainPage m = new MainPage();
+            Switcher.Switch(m);
+            
         }
     }
 }
