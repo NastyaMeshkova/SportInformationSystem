@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\
 SportSectionsInformationSystem.UI
 none
 false
 DEBUG;TRACE
-C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportSectionsInformationSystem.UI\App.xaml
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\App.xaml
 9-1395963687
 
-17-559950056
-16-1886287924
+172045762286
+161719886877
 Pages\ActivityControl.xaml;Pages\MainPage.xaml;Pages\PageAddSection.xaml;Pages\PageFiltered.xaml;Pages\SearchControl.xaml;Windows\MainWindow.xaml;Pages\PageCarousel.xaml;Pages\PatternCarousel.xaml;Windows\WindowSearch.xaml;
 
 True

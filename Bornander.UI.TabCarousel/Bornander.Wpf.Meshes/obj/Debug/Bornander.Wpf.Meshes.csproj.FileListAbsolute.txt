@@ -3,3 +3,8 @@ C:\Олеся\Visual Studio\Bornander.UI.TabCarousel\Bornander.Wpf.Meshes\bin\De
 C:\Олеся\Visual Studio\Bornander.UI.TabCarousel\Bornander.Wpf.Meshes\obj\Debug\Bornander.Wpf.Meshes.csprojResolveAssemblyReference.cache
 C:\Олеся\Visual Studio\Bornander.UI.TabCarousel\Bornander.Wpf.Meshes\obj\Debug\Bornander.Wpf.Meshes.dll
 C:\Олеся\Visual Studio\Bornander.UI.TabCarousel\Bornander.Wpf.Meshes\obj\Debug\Bornander.Wpf.Meshes.pdb
+C:\Users\Ирина\Source\Repos\SportInformationSystem\Bornander.UI.TabCarousel\Bornander.Wpf.Meshes\bin\Debug\Bornander.Wpf.Meshes.dll
+C:\Users\Ирина\Source\Repos\SportInformationSystem\Bornander.UI.TabCarousel\Bornander.Wpf.Meshes\bin\Debug\Bornander.Wpf.Meshes.pdb
+C:\Users\Ирина\Source\Repos\SportInformationSystem\Bornander.UI.TabCarousel\Bornander.Wpf.Meshes\obj\Debug\Bornander.Wpf.Meshes.csprojResolveAssemblyReference.cache
+C:\Users\Ирина\Source\Repos\SportInformationSystem\Bornander.UI.TabCarousel\Bornander.Wpf.Meshes\obj\Debug\Bornander.Wpf.Meshes.dll
+C:\Users\Ирина\Source\Repos\SportInformationSystem\Bornander.UI.TabCarousel\Bornander.Wpf.Meshes\obj\Debug\Bornander.Wpf.Meshes.pdb

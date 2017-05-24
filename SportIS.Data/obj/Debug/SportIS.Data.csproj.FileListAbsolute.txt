@@ -5,3 +5,10 @@ C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportIS.Data\obj\Debu
 C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportIS.Data\obj\Debug\SportIS.Data.pdb
 C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportIS.Data\bin\Debug\Newtonsoft.Json.dll
 C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportIS.Data\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportIS.Data\bin\Debug\SportIS.Data.dll
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportIS.Data\bin\Debug\SportIS.Data.pdb
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportIS.Data\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportIS.Data\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportIS.Data\obj\Debug\SportIS.Data.csprojResolveAssemblyReference.cache
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportIS.Data\obj\Debug\SportIS.Data.dll
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportIS.Data\obj\Debug\SportIS.Data.pdb

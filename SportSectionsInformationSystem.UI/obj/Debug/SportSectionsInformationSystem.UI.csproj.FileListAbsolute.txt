@@ -36,3 +36,41 @@ C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportSectionsInformat
 C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\Windows\WindowSearch.baml
 C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\Pages\PageFiltered.g.cs
 C:\Олеся\Visual Studio\SportSectionsInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\Pages\PageFiltered.baml
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\bin\Debug\SportSectionsInformationSystem.UI.exe.config
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\SportSectionsInformationSystem.UI.exe
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\SportSectionsInformationSystem.UI.pdb
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\bin\Debug\SportSectionsInformationSystem.UI.exe
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\bin\Debug\SportSectionsInformationSystem.UI.pdb
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\bin\Debug\Bornander.UI.TabCarousel.dll
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\bin\Debug\Bornander.Wpf.Meshes.dll
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\bin\Debug\SportIS.Data.dll
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\bin\Debug\Bornander.UI.TabCarousel.pdb
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\bin\Debug\Bornander.Wpf.Meshes.pdb
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\bin\Debug\SportIS.Data.pdb
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\SportSectionsInformationSystem.UI.csprojResolveAssemblyReference.cache
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\Pages\ActivityControl.g.cs
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\Pages\MainPage.g.cs
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\Pages\PageAddSection.g.cs
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\Pages\PageFiltered.g.cs
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\Pages\SearchControl.g.cs
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\Windows\MainWindow.g.cs
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\Pages\PageCarousel.g.cs
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\Pages\PatternCarousel.g.cs
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\Windows\WindowSearch.g.cs
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\App.g.cs
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\SportSectionsInformationSystem.UI_MarkupCompile.cache
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\SportSectionsInformationSystem.UI_MarkupCompile.lref
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\Pages\ActivityControl.baml
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\Pages\MainPage.baml
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\Pages\PageAddSection.baml
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\Pages\PageFiltered.baml
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\Pages\SearchControl.baml
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\Windows\MainWindow.baml
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\Pages\PageCarousel.baml
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\Pages\PatternCarousel.baml
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\Windows\WindowSearch.baml
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\SportSectionsInformationSystem.UI.g.resources
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\SportSectionsInformationSystem.UI.Properties.Resources.resources
+C:\Users\Ирина\Source\Repos\SportInformationSystem\SportSectionsInformationSystem.UI\obj\Debug\SportSectionsInformationSystem.UI.csproj.GenerateResource.Cache

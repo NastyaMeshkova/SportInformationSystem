@@ -19,3 +19,5 @@ C:\Олеся\Visual Studio\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel.Te
 C:\Олеся\Visual Studio\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel.Test\obj\Debug\Page1.g.cs
 C:\Олеся\Visual Studio\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel.Test\obj\Debug\Bornander.UI.TabCarousel.Test_MarkupCompile.lref
 C:\Олеся\Visual Studio\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel.Test\obj\Debug\Page1.baml
+C:\Users\Ирина\Source\Repos\SportInformationSystem\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel.Test\obj\Debug\Bornander.UI.TabCarousel.Test.exe
+C:\Users\Ирина\Source\Repos\SportInformationSystem\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel.Test\obj\Debug\Bornander.UI.TabCarousel.Test.pdb
