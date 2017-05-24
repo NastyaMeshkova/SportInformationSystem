@@ -35,27 +35,40 @@ namespace SportSectionsInformationSystem.UI.Windows
 
         private void searchClick(object sender, RoutedEventArgs e)
         {
-            double priceMax = 0;
-            double priceMin = 0;
-            if (textboxPriceMax.Text == "")
+            try
             {
-                priceMax = 100000;
-            }
-            else
-            {
-                priceMax = double.Parse(textboxPriceMax.Text);
-            }
-            if (textboxPriceMin.Text == "")
-            {
-                priceMin = -1;
-            }
-            else
-            {
-                priceMin = double.Parse(textboxPriceMin.Text);
-            }
-            Switcher.Switch(new PageFiltered(r.Search(priceMin,priceMax,comboboxTypes.Text,comboboxSubway.Text)));
-            this.Close();
+                double priceMax = 0;
+                double priceMin = 0;
+                if (textboxPriceMax.Text == "")
+                {
+                    priceMax = 100000;
+                }
+                else
+                {
+                    priceMax = double.Parse(textboxPriceMax.Text);
+                }
+                if (textboxPriceMin.Text == "")
+                {
+                    priceMin = -1;
+                }
+                else
+                {
+                    priceMin = double.Parse(textboxPriceMin.Text);
+                }
+                if (priceMax<0||(priceMin<0&&priceMin!=-1))
+                {
+                    throw new ArgumentException("Цена отрицательная");
+                }
+                Switcher.Switch(new PageFiltered(r.Search(priceMin, priceMax, comboboxTypes.Text, comboboxSubway.Text)));
+                this.Close();
 
+            }
+            catch (FormatException)
+            {
+
+                MessageBox.Show("Цена введена неверно");
+            }
+            
         }
     }
 }
