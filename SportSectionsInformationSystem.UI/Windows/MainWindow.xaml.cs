@@ -35,7 +35,7 @@ namespace SportSectionsInformationSystem.UI
         }
         private void mainFrame_Loaded(object sender, RoutedEventArgs e)
         {
-            Navigate( new PageCarousel(this));
+            Navigate( new PageCarousel());
         }
 
     }

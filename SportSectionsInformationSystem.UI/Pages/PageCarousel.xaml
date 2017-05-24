@@ -14,7 +14,7 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition MaxHeight="150"/>
+            <RowDefinition MaxHeight="100"/>
             <RowDefinition/>
             <RowDefinition MaxHeight="100" />
         </Grid.RowDefinitions>
@@ -25,10 +25,10 @@
         </Grid.ColumnDefinitions>
         <bornander:Carousel x:Name="TabControl" Margin="-600,0" Depth="0.1" Grid.ColumnSpan="3" Grid.Row="1">
         </bornander:Carousel>
-        <Button Name="button_previous" Click="button_previous_Click" Grid.Row="2" Margin="300,0,0,00">
-            <Button.Background>
-                <ImageBrush ImageSource="/SportSectionsInformationSystem.UI;component/UI/New-arrow-303271_960_720.png"/>
-            </Button.Background>
+        <Button Name="button_previous" Click="button_previous_Click" Grid.Row="2" Margin="300,10,10,10" Background="{x:Null}">
+           
+                <Image Source="/SportSectionsInformationSystem.UI;component/UI/New-arrow-303271_960_720.png"/>
+           
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="-1"/>
@@ -39,15 +39,19 @@
             </Button.RenderTransform>
         </Button>
 
-        <Button Name="button_next"  Click="button_next_Click" Grid.Column="3" Grid.Row="2" Margin="200,0,60,0">
-            <Button.Background>
-                <ImageBrush ImageSource="/SportSectionsInformationSystem.UI;component/UI/New-arrow-303271_960_720.png"/>
-            </Button.Background>
+        <Button Name="button_next"  Click="button_next_Click" Grid.Column="3" Grid.Row="2" Margin="200,10,60,10" Background="{x:Null}">
+          
+                <Image Source="/SportSectionsInformationSystem.UI;component/UI/New-arrow-303271_960_720.png"/>
+          
         </Button>
-        <Button Grid.Column="3" Margin="300,10,10,10" Click="searchClick">
-            <Button.Background>
-                <ImageBrush ImageSource="/SportSectionsInformationSystem.UI;component/UI/why-icon.png"/>
-            </Button.Background>
+        <Button   Margin="10,10,200,10" Background="{x:Null}" Click="clickOpenFromFileClick" >
+            <Image Source="/SportSectionsInformationSystem.UI;component/UI/unnamed.png"/>
+          
+        </Button>
+        <Button Grid.Column="3" Margin="300,10,10,10" Click="searchClick" Background="{x:Null}">
+            
+                <Image Source="/SportSectionsInformationSystem.UI;component/UI/why-icon.png"/>
+            
         </Button>
         <Label Grid.Column="1" Margin="-300,0" FontSize="70" Content="Выберите секцию" HorizontalContentAlignment="Center" FontWeight="Bold" FontFamily="Euphemia">
             <Label.Foreground>

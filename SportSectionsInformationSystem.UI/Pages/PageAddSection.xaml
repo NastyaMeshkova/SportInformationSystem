@@ -6,7 +6,10 @@
       xmlns:local="clr-namespace:SportSectionsInformationSystem.UI.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="1080" d:DesignWidth="1920"
-      Title="PageAddSection" Background="#FFF2EEEE" Loaded="Page_Loaded">
+      Title="PageAddSection" Loaded="Page_Loaded" FontFamily="Georgia">
+    <Page.Background>
+        <ImageBrush ImageSource="/SportSectionsInformationSystem.UI;component/UI/setwalls.png"/>
+    </Page.Background>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -28,11 +31,13 @@
         <TextBox Name="textbox_name" Grid.Row="1" Margin="20"/>
         <TextBox TextWrapping="Wrap" Name="textbox_desc" Grid.Row="5" Margin="20"/>
         <ComboBox Name="combobox_sportclub" Grid.Row="3" Margin="20,20,20,20">
-            
+
         </ComboBox>
         <Label  Grid.Row="6" FontSize="30" Content="Введите стоимость одного занятия"/>
         <TextBox Name="textbox_price" Grid.Row="7" Margin="20"/>
-        <Button Content="Exit" Grid.Column="1" Margin="840,20,20,20"/>
+        <Button  Grid.Column="1" Margin="500,20,20,20" Background="{x:Null}">
+            <Image Source="/SportSectionsInformationSystem.UI;component/UI/New-arrow-303271_960_720.png"/>
+        </Button>
         <ListBox Name="list_week_time" Grid.Column="1" Grid.RowSpan="3" Grid.Row="1" Margin="20"/>
         <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="4" Margin="20" HorizontalAlignment="Center">
             <Button Width="50" Content="+" Margin="10" Click="add_click"/>
@@ -40,6 +45,6 @@
             <TextBox Name="textbox_time" Width="170" Margin="10"/>
             <Button Width="50" Content="Х" Margin="10" Click="delete_click"/>
         </StackPanel>
-        <Button Name="buttonAddEdit" Grid.Column="1" Grid.Row="7" Margin="250,20" Content="Добавить" Click="add_section_click"/>
+        <Button Name="buttonAddEdit" Grid.Column="1" Grid.Row="7" Margin="200,20" Content="Добавить" Click="add_section_click"/>
     </Grid>
 </Page>

@@ -62,40 +62,35 @@ namespace SportIS.Data.Logic
         {
             sportActivities.Add(s);
         }
-        public void Serialize(List<SportActivity> sport)
+        public void Serialize(List<SportActivity> sport, string file)
         {
             string str = JsonConvert.SerializeObject(sport);
-            File.WriteAllText("../../../SportIS.Data/Files/SportActivities.json", str);
+            File.WriteAllText(file, str);
         }
-        public SportActivity Deserialize(string file)
+        public List<SportActivity> Deserialize(string file)
         {
-
-            return null;
+            List<SportActivity> activities = JsonConvert.DeserializeObject<List<SportActivity>>(File.ReadAllText(file));
+            for (int i = 0; i < activities.Count; i++)
+            {
+                if (activities[i].Title == null || activities[i].Type == null)
+                {
+                    throw new ArgumentException("Загруженный Вами файл имеет неверный формат");
+                }
+                sportActivities.AddRange(activities);
+            }
+            return activities;
         }
-        public List<SportActivity> Search( double priceMin, double priceMax, string type, string metroStation)
+        public List<SportActivity> Search(double priceMin, double priceMax, string type, string metroStation)
         {
             var filtered = SportActivities.Where(x =>
                 (
 
-                   ( priceMin == -1 && priceMax==100000? true : x.Price >=priceMin && x.Price<=priceMax)
+                   (priceMin == -1 && priceMax == 100000 ? true : x.Price >= priceMin && x.Price <= priceMax)
                     && (type == "" ? true : x.Type.Equals(type))
                     && (metroStation == "" ? true : x.Club.Stations.Contains(metroStation))
                 )).ToList();
             return filtered;
         }
-        /*private bool ContainsDayOfWeek(List<string> weekDays, SportActivity s)
-        {
-            bool flag = false;
-            foreach (var item in weekDays)
-            {
-                if (s.WeekDayTime.Keys.Contains(item))
-                {
-                    flag = true;
-                    break;
-                }
-            }
-            return flag;
-        }*/
 
     }
 }

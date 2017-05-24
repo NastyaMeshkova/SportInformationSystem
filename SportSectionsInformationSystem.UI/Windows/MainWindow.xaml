@@ -6,8 +6,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SportSectionsInformationSystem.UI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1080" Width="1920">
+        Title="Информационная система спортивных секций" Height="1080" Width="1920" Icon="/SportSectionsInformationSystem.UI;component/UI/aliya-mustafina-31804-1920x1200.jpg">
     <Grid>
-        <Frame Name="mainFrame" Loaded="mainFrame_Loaded"/>
+        <Frame NavigationUIVisibility="Hidden" Name="mainFrame" Loaded="mainFrame_Loaded"/>
     </Grid>
 </Window>

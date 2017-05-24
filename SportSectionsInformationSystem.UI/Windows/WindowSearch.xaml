@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SportSectionsInformationSystem.UI.Windows"
         mc:Ignorable="d"
-        Title="Поиск секции" Height="400" Width="400">
+        Title="Поиск секции" ResizeMode="NoResize" Height="400" Width="460" FontStyle="Italic" FontSize="15" FontFamily="Impact" Foreground="#FFF3F3F3" >
+    <Window.Background>
+        <ImageBrush ImageSource="/SportSectionsInformationSystem.UI;component/Images/CarouselCovers/Фигурное катание.jpg"/>
+    </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -20,13 +23,17 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Label Grid.ColumnSpan="3" Content="Выберите вид спорта"/>
-        <ComboBox IsEditable="True" Margin="10" Grid.ColumnSpan="3" Name="comboboxTypes" Grid.Row="1"/>
-        <Label  Grid.ColumnSpan="3" Content="Выберите цену" Grid.Row="2"/>
-        <TextBox   Name="textboxPriceMin" Grid.Row="3" Margin="10" />
-        <TextBox Grid.Column="2" Name="textboxPriceMax" Grid.Row="3" Margin="10"/>
-        <Label  Grid.ColumnSpan="3" Content="Ближайшая станция метро" Grid.Row="4"/>
-        <ComboBox IsEditable="True" Margin="10" Grid.ColumnSpan="3" Name="comboboxSubway" Grid.Row="5"/>
-        <Button Grid.Row="6" Grid.ColumnSpan="2" Margin="150,10" Click="searchClick" />
+        <Label Grid.ColumnSpan="3" Content="Выберите вид спорта" Foreground="#FFFBF6F6"/>
+        <ComboBox Opacity="0.8" IsEditable="True" Margin="10" Grid.ColumnSpan="3" Name="comboboxTypes" Grid.Row="1"/>
+        <Label  Grid.ColumnSpan="3" Content="Выберите цену" Grid.Row="2" Foreground="#FFFBF4F4"/>
+        <TextBox  Opacity="0.8" Name="textboxPriceMin" Grid.Row="3" Margin="10" />
+        <TextBox Opacity="0.8" Grid.Column="2" Name="textboxPriceMax" Grid.Row="3" Margin="10"/>
+        <Label  Grid.ColumnSpan="3" Content="Ближайшая станция метро" Grid.Row="4" Foreground="#FFFAF7F7"/>
+        <ComboBox Opacity="0.8" IsEditable="True" Margin="10" Grid.ColumnSpan="3" Name="comboboxSubway" Grid.Row="5"/>
+        <Button Opacity="0.8" Grid.Row="6" Grid.ColumnSpan="2" Margin="200,0" Click="searchClick" >
+            <Button.Background>
+                <ImageBrush ImageSource="/SportSectionsInformationSystem.UI;component/UI/why-icon.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

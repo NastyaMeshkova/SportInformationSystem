@@ -20,7 +20,7 @@ namespace SportSectionsInformationSystem.UI.Pages
     /// <summary>
     /// Логика взаимодействия для ActivityControl.xaml
     /// </summary>
-    public partial class ActivityControl :  UserControl
+    public partial class ActivityControl : UserControl
     {
         SportActivity s;
         Repository r;
@@ -28,39 +28,52 @@ namespace SportSectionsInformationSystem.UI.Pages
         {
             this.s = s;
             r = Repository.Instance;
-           
+
             InitializeComponent();
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            text_actTitle.Text = s.Title;
-            text_actdesc.Text = s.Description;
-            text_address.Text = s.Club.Address;
-            text_clubname.Text = s.Club.ClubName;
-            text_metro.Text = "";
-            for (int i = 0; i < s.Club.Stations.Count; i++)
+            try
             {
-                text_metro.Text += s.Club.Stations[i]+" ";
-            }
-            text_price.Text = s.Price.ToString();
+                text_actTitle.Text = s.Title;
+                text_actdesc.Text = s.Description;
+                text_address.Text = s.Club.Address;
+                text_clubname.Text = s.Club.ClubName;
+                text_metro.Text = "";
+                for (int i = 0; i < s.Club.Stations.Count; i++)
+                {
+                    text_metro.Text += s.Club.Stations[i] + " ";
+                }
+                text_price.Text = s.Price.ToString();
 
-            
+            }
+            catch (NullReferenceException)
+            {
+
+                MessageBox.Show("Загруженный Вами файл имеет неверный формат");
+            }
+
+
         }
 
         private void button_edit_click(object sender, RoutedEventArgs e)
         {
             CurrentActivity.Activity = s.Type;
-            CurrentActivity.BackGroundURL = "../../Images/CarouselCovers/"+CurrentActivity.Activity+".jpg";
+            CurrentActivity.BackGroundURL = "../../Images/CarouselCovers/" + CurrentActivity.Activity + ".jpg";
             Switcher.Switch(new PageAddSection(s));
         }
 
         private void buttonDeleteClick(object sender, RoutedEventArgs e)
         {
-            CurrentActivity.Activity = s.Type;
-            CurrentActivity.BackGroundURL = "../../Images/CarouselCovers/" + CurrentActivity.Activity + ".jpg";        
-            r.SportActivities.Remove(s);
-            Switcher.Switch(new MainPage());
+            if (MessageBox.Show("Вы уверены, что хотите удалить выбранную спортивную секцию?", "Exit", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
+            {
+                CurrentActivity.Activity = s.Type;
+                CurrentActivity.BackGroundURL = "../../Images/CarouselCovers/" + CurrentActivity.Activity + ".jpg";
+                r.SportActivities.Remove(s);
+                Switcher.Switch(new MainPage());
+            }
+
         }
     }
 }

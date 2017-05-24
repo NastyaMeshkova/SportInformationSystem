@@ -26,11 +26,9 @@ namespace SportSectionsInformationSystem.UI.Pages
     public partial class PageCarousel : Page
     {
         Repository r;
-        MainWindow m;
-        public PageCarousel(MainWindow _m)
+        public PageCarousel()
         {
-            r = Repository.Instance;
-            m = _m;      
+            r = Repository.Instance;             
             InitializeComponent();
             DataContext = TabControl;
             CreateTabs();
@@ -80,6 +78,31 @@ namespace SportSectionsInformationSystem.UI.Pages
         {
             WindowSearch w = new WindowSearch();
             w.Show();
+        }
+
+        private void clickOpenFromFileClick(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+            dlg.FileName = "Document"; // Название файла по умолчанию
+            dlg.DefaultExt = ".json"; // Расширение файла по умолчанию
+            dlg.Filter = "Json documents (.json)|*.json"; // Фильтр по умолчанию
+            dlg.Multiselect = false;
+            //необходимо удостовериться, что общее диалоговое окно отобразилось
+            bool? result = dlg.ShowDialog();
+
+            //Обработка результатов открытия окна
+            try
+            {
+                if (result == true)
+                {
+                    Switcher.Switch(new PageFiltered(r.Deserialize(dlg.FileName)));
+                }
+            }
+            catch (ArgumentException e1)
+            {
+                MessageBox.Show(e1.Message);
+            }
+            
         }
     }
 }

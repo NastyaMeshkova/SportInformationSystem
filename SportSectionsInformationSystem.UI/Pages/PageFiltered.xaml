@@ -12,7 +12,26 @@
     </Page.Background>
     <ScrollViewer VerticalScrollBarVisibility="Hidden">
         <Grid>
-        <StackPanel Name="stackPanelShow"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition MaxWidth="100"/>
+                <ColumnDefinition/>
+                <ColumnDefinition MaxWidth="100"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition MaxHeight="100"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button Click="buttonbackClick" Background="{x:Null}">
+                
+                    <Image Source="/SportSectionsInformationSystem.UI;component/UI/new_go_previous.png"/>
+               
+            </Button>
+            <Button Grid.Column="2" Click="buttonSaveInFileClick" Background="{x:Null}">
+                
+                    <Image Source="/SportSectionsInformationSystem.UI;component/UI/floppy-drive-3-12-icon.png"/>
+                
+            </Button>
+            <StackPanel Grid.Column="1" Grid.RowSpan="2" Name="stackPanelShow"/>
     </Grid>
     </ScrollViewer>
 </Page>

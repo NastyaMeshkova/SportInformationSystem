@@ -206,6 +206,19 @@
   <ItemGroup>
     <Resource Include="UI\New-arrow-303271_960_720.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\edit_add.png" />
+    <Resource Include="UI\new_go_previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\aliya-mustafina-31804-1920x1200.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\floppy-drive-3-12-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\unnamed.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

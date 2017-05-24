@@ -52,10 +52,9 @@ namespace SportSectionsInformationSystem.UI.Pages
             }
         }
 
-        private void deleteSectionClick(object sender, RoutedEventArgs e)
+        private void buttonBackClick(object sender, RoutedEventArgs e)
         {
-            r.Serialize(r.SportActivities);
-            MessageBox.Show("jr");
+            Switcher.Switch(new PageCarousel());
         }
     }
 }
