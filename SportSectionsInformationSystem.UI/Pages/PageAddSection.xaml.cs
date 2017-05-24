@@ -176,5 +176,10 @@ namespace SportSectionsInformationSystem.UI.Pages
                 list_week_time.Items.Add(week_time.ElementAt(i).Key + " " + week_time.ElementAt(i).Value);
             }
         }
+
+        private void clickBack(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new MainPage());
+        }
     }
 }

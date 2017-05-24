@@ -35,7 +35,7 @@
         </ComboBox>
         <Label  Grid.Row="6" FontSize="30" Content="Введите стоимость одного занятия"/>
         <TextBox FontSize="15" Name="textbox_price" Grid.Row="7" Margin="20"/>
-        <Button  Grid.Column="1" Margin="500,20,20,20" Background="{x:Null}">
+        <Button  Grid.Column="1" Margin="500,20,20,20" Background="{x:Null}" Click="clickBack">
             <Image Source="/SportSectionsInformationSystem.UI;component/UI/New-arrow-303271_960_720.png"/>
         </Button>
         <ListBox FontSize="15" Name="list_week_time" Grid.Column="1" Grid.RowSpan="3" Grid.Row="1" Margin="20"/>
